@@ -19,30 +19,13 @@ jobs:
       with:
         lfs: true
 
-    - name: Pack solution
-      uses: microsoft/powerplatform-actions/pack-solution@v0
-      with:
-        solution-folder: solutions/ALMLab
-        solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\solutions\ALMLab.zip
-        solution-type: Unmanaged
-
-   
-
-    - name: Export solution as unmanaged
-      uses: microsoft/powerplatform-actions/export-solution@v0
-      with:
-        environment-url: 'https://org642ee147.crm4.dynamics.com/'
-        user-name: 'alans@CRM759616.OnMicrosoft.com'
-        password-secret: ${{ secrets.password2 }}
-        solution-name: ALMLab
-        managed: false
-        solution-output-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\ship\ALMLab.zip
+  
 
     - name: Upload the ready to ship solution to GH artifact store
       uses: actions/upload-artifact@v2
       with:
         name: managedSolutions
-        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\ship\ALMLab.zip
+        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab\ALMLab_1_0_0_2.zip
 
   release-to-staging:
     needs: [ convert-to-managed ]
