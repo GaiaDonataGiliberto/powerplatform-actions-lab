@@ -32,7 +32,7 @@ jobs:
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\ALMLab_1_0_0_1.zip
+        solution-file: 'C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\ALMLab_1_0_0_1.zip'
         solution-folder: out/solutions/ALMLab
         solution-type: 'Unmanaged'
         overwrite-files: true
