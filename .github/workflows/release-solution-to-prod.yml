@@ -26,15 +26,7 @@ jobs:
         solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\solutions\ALMLab.zip
         solution-type: Unmanaged
 
-    - name: Import solution as unmanaged to build env
-      uses: microsoft/powerplatform-actions/import-solution@v0
-      with:
-        environment-url: ${{ secrets.environment }}
-        user-name: 'alans@CRM759616.OnMicrosoft.com'
-        password-secret: ${{ secrets.password2 }}
-        solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\solutions\ALMLab.zip
-        force-overwrite: true
-        publish-changes: true
+   
 
     - name: Export solution as unmanaged
       uses: microsoft/powerplatform-actions/export-solution@v0
