@@ -6,23 +6,23 @@
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{1ccf5e7d-3f21-4a26-b88e-bed015c25224}</savedqueryid>
+    <savedqueryid>{19522744-2ed4-406b-b2d0-2b10fb41ea37}</savedqueryid>
     <layoutxml>
-      <grid name="resultset" jump="user9_name" select="1" icon="1" preview="1">
-        <row name="result" id="user9_timeoffrequestid">
-          <cell name="user9_name" width="300" />
+      <grid name="avn_prodottos" jump="avn_name" select="1" icon="1" preview="1">
+        <row name="avn_prodotto" id="avn_prodottoid">
+          <cell name="avn_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
     </layoutxml>
-    <querytype>0</querytype>
+    <querytype>2</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="user9_timeoffrequest">
-          <attribute name="user9_timeoffrequestid" />
-          <attribute name="user9_name" />
+        <entity name="avn_prodotto">
+          <attribute name="avn_prodottoid" />
+          <attribute name="avn_name" />
           <attribute name="createdon" />
-          <order attribute="user9_name" descending="false" />
+          <order attribute="avn_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
@@ -31,7 +31,7 @@
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active Time Off Requests" languagecode="1033" />
+      <LocalizedName description="Prodotto Associated View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>
