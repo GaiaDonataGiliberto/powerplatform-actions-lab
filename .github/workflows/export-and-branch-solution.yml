@@ -39,7 +39,7 @@ jobs:
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        solution-file: out/exported/Prova.zip
+        solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\Prova.zip
         solution-folder: out/solutions/ALMLab
         solution-type: 'Unmanaged'
         overwrite-files: true
