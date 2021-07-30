@@ -22,8 +22,8 @@ jobs:
     - name: Pack solution
       uses: microsoft/powerplatform-actions/pack-solution@v0
       with:
-        solution-folder: solutions/ALMLab
-        solution-file: out/solutions/ALMLab.zip
+        solution-folder: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported
+        solution-file: ALMLab_1_0_0_1
         solution-type: Unmanaged
 
     - name: Import solution as unmanaged to build env
