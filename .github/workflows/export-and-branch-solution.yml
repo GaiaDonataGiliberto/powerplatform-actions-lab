@@ -31,8 +31,8 @@ jobs:
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: 'https://org642ee147.crm4.dynamics.com/'
-        user-name: 'admin@CRM759616.onmicrosoft.com'
-        password-secret: ${{ secrets.password }}
+        user-name: 'alans@CRM759616.OnMicrosoft.com'
+        password-secret: ${{ secrets.password2 }}
         solution-name: GitHubDemo
         solution-output-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\ALMLab.zip
 
