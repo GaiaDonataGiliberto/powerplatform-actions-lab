@@ -27,19 +27,12 @@ jobs:
         user-name: 'alans@CRM759616.OnMicrosoft.com'
         password-secret: ${{ secrets.password2 }}
 
-    - name: export-solution action
-      uses: microsoft/powerplatform-actions/export-solution@v0
-      with:
-        environment-url: 'https://org642ee147.crm4.dynamics.com/'
-        user-name: 'alans@CRM759616.OnMicrosoft.com'
-        password-secret: ${{ secrets.password2 }}
-        solution-name: ALMLab
-        solution-output-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\Prova.zip
+    
         
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\Prova.zip
+        solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\ALMLab_1_0_0_1.zip
         solution-folder: out/solutions/ALMLab
         solution-type: 'Unmanaged'
         overwrite-files: true
