@@ -34,20 +34,20 @@ jobs:
         user-name: 'admin@CRM759616.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
         solution-name: GitHubDemo
-        solution-output-file: out/exported/ALMLab.zip
+        solution-output-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\ALMLab.zip
 
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        solution-file: out/exported/ALMLab.zip
-        solution-folder: out/solutions/ALMLab
+        solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\ALMLab.zip
+        solution-folder: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\solutions\ALMLab
         solution-type: 'Unmanaged'
         overwrite-files: true
 
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
-        solution-folder: out/solutions/ALMLab
-        solution-target-folder: solutions/ALMLab
+        solution-folder: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\solutions\ALMLab
+        solution-target-folder: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         allow-empty-commit: true
