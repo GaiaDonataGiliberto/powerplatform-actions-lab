@@ -40,8 +40,8 @@ jobs:
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: 'https://org642ee147.crm4.dynamics.com/'
-        user-name: 'admin@CRM759616.onmicrosoft.com'
-        password-secret: ${{ secrets.password }}
+        user-name: 'alans@CRM759616.OnMicrosoft.com'
+        password-secret: ${{ secrets.password2 }}
         solution-name: ALMLab
         managed: false
         solution-output-file: out/ship/ALMLab.zip
@@ -73,8 +73,8 @@ jobs:
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
         environment-url: 'https://orgff96f58a.crm4.dynamics.com/'
-        user-name: 'admin@CRM759616.onmicrosoft.com'
-        password-secret: ${{ secrets.password }}
+        user-name: 'alans@CRM759616.OnMicrosoft.com'
+        password-secret: ${{ secrets.password2 }}
         solution-file: out/release/ALMLab.zip
         force-overwrite: true
         publish-changes: true
