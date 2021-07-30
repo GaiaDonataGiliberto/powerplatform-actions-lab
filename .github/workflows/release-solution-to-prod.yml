@@ -9,26 +9,9 @@ on:
     types: [created]
 
 jobs:
-  convert-to-managed:
-    runs-on: windows-latest
-    env:
-      RUNNER_DEBUG: 1
-
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        lfs: true
-
   
 
-    - name: Upload the ready to ship solution to GH artifact store
-      uses: actions/upload-artifact@v2
-      with:
-        name: ALMLab_1_0_0_2
-        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab\ALMLab_1_0_0_2.zip
-
   release-to-staging:
-    needs: [ convert-to-managed ]
     runs-on: windows-latest
     env:
       RUNNER_DEBUG: 1
@@ -38,11 +21,7 @@ jobs:
       with:
         lfs: true
 
-    - name: Fetch the ready to ship solution from GH artifact store
-      uses: actions/download-artifact@v2
-      with:
-        name: ALMLab_1_0_0_2
-        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab\ALMLab_1_0_0_2.zip
+    
 
     - name: Import solution to prod env
       uses: microsoft/powerplatform-actions/import-solution@v0
@@ -50,6 +29,6 @@ jobs:
         environment-url: 'https://orgff96f58a.crm4.dynamics.com/'
         user-name: 'alans@CRM759616.OnMicrosoft.com'
         password-secret: ${{ secrets.password2 }}
-        solution-file: out/release/ALMLab.zip
+        solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab\ALMLab_1_0_0_2.zip
         force-overwrite: true
         publish-changes: true
