@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <EntityRelationship Name="business_unit_user9_timeoffrequest" />
-  <EntityRelationship Name="lk_user9_timeoffrequest_createdby" />
-  <EntityRelationship Name="lk_user9_timeoffrequest_modifiedby" />
-  <EntityRelationship Name="owner_user9_timeoffrequest" />
-  <EntityRelationship Name="team_user9_timeoffrequest" />
-  <EntityRelationship Name="user_user9_timeoffrequest" />
+  <EntityRelationship Name="business_unit_avn_prodotto" />
+  <EntityRelationship Name="lk_avn_prodotto_createdby" />
+  <EntityRelationship Name="lk_avn_prodotto_modifiedby" />
+  <EntityRelationship Name="owner_avn_prodotto" />
+  <EntityRelationship Name="team_avn_prodotto" />
+  <EntityRelationship Name="user_avn_prodotto" />
 </EntityRelationships>
