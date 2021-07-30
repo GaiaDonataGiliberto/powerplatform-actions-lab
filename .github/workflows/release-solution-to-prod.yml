@@ -24,8 +24,8 @@ jobs:
     - name: Upload the ready to ship solution to GH artifact store
       uses: actions/upload-artifact@v2
       with:
-        name: ALMLab_1_0_0_2.zip
-        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab
+        name: ALMLab_1_0_0_2
+        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab\ALMLab_1_0_0_2.zip
 
   release-to-staging:
     needs: [ convert-to-managed ]
@@ -41,8 +41,8 @@ jobs:
     - name: Fetch the ready to ship solution from GH artifact store
       uses: actions/download-artifact@v2
       with:
-        name: ALMLab_1_0_0_2.zip
-        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab
+        name: ALMLab_1_0_0_2
+        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab\ALMLab_1_0_0_2.zip
 
     - name: Import solution to prod env
       uses: microsoft/powerplatform-actions/import-solution@v0
