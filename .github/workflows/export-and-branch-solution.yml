@@ -33,7 +33,7 @@ jobs:
         environment-url: 'https://org642ee147.crm4.dynamics.com/'
         user-name: 'alans@CRM759616.OnMicrosoft.com'
         password-secret: ${{ secrets.password2 }}
-        solution-name: ALM Lab
+        solution-name: ALMLab
         solution-output-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\Prova.zip
         
     - name: unpack-solution action
