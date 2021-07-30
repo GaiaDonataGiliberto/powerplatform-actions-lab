@@ -9,7 +9,7 @@ on:
     types: [created]
 
 jobs:
-   convert-to-managed:
+  convert-to-managed:
     runs-on: windows-latest
     env:
       RUNNER_DEBUG: 1
@@ -19,15 +19,33 @@ jobs:
       with:
         lfs: true
 
-     
+    - name: Import solution as unmanaged to build env
+      uses: microsoft/powerplatform-actions/import-solution@v0
+      with:
+        environment-url: 'https://org642ee147.crm4.dynamics.com/'
+        user-name: 'admin@CRM759616.onmicrosoft.com'
+        password-secret: ${{ secrets.password }}
+        solution-file: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab\ALMLab_1_0_0_2.zip
+        force-overwrite: true
+        publish-changes: true
+
+    - name: Export solution as unmanaged
+      uses: microsoft/powerplatform-actions/export-solution@v0
+      with:
+        environment-url: 'https://org642ee147.crm4.dynamics.com/'
+        user-name: 'admin@CRM759616.onmicrosoft.com'
+        password-secret: ${{ secrets.password }}
+        solution-name: ALMLab
+        managed: false
+        solution-output-file: out/ship/ALMLab.zip
+
     - name: Upload the ready to ship solution to GH artifact store
       uses: actions/upload-artifact@v2
       with:
         name: managedSolutions
         path: out/ship/ALMLab.zip
 
-  
-   release-to-staging:
+  release-to-staging:
     needs: [ convert-to-managed ]
     runs-on: windows-latest
     env:
