@@ -48,6 +48,6 @@ jobs:
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
         solution-folder: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\solutions\ALMLab
-        solution-target-folder: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\solutions\ALMLab
+        solution-target-folder: C:/Users/gaia.d.giliberto/Desktop/MPS/RFC/solutions/ALMLab
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         allow-empty-commit: true
