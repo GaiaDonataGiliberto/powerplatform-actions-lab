@@ -1,9 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_user9_catalogo" />
+  <EntityRelationship Name="business_unit_user9_prodotto" />
   <EntityRelationship Name="business_unit_user9_timeoffrequest" />
+  <EntityRelationship Name="lk_user9_catalogo_createdby" />
+  <EntityRelationship Name="lk_user9_catalogo_modifiedby" />
+  <EntityRelationship Name="lk_user9_prodotto_createdby" />
+  <EntityRelationship Name="lk_user9_prodotto_modifiedby" />
   <EntityRelationship Name="lk_user9_timeoffrequest_createdby" />
   <EntityRelationship Name="lk_user9_timeoffrequest_modifiedby" />
+  <EntityRelationship Name="owner_user9_catalogo" />
+  <EntityRelationship Name="owner_user9_prodotto" />
   <EntityRelationship Name="owner_user9_timeoffrequest" />
+  <EntityRelationship Name="team_user9_catalogo" />
+  <EntityRelationship Name="team_user9_prodotto" />
   <EntityRelationship Name="team_user9_timeoffrequest" />
+  <EntityRelationship Name="user_user9_catalogo" />
+  <EntityRelationship Name="user_user9_prodotto" />
   <EntityRelationship Name="user_user9_timeoffrequest" />
 </EntityRelationships>
