@@ -24,8 +24,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: ALMLab_1_0_0_2
-        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\ALMLab_1_0_0_2.zip
-
+        path: C:\Users\gaia.d.giliberto\Desktop\MPS\RFC\out\exported\
   release-to-staging:
     needs: [ convert-to-managed ]
     runs-on: windows-latest
